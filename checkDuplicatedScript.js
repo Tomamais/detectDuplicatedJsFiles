@@ -26,9 +26,11 @@ function checkDuplicatedScript() {
 
 	var results = [];
 	for (var i = 0; i < arr.length - 1; i++) {
-		if (sorted_arr[i + 1].src == sorted_arr[i].src) {
-			results.push(sorted_arr[i]);
-		}
+		if (!(sorted_arr[i + 1].src == '') && !(sorted_arr[i].src == '')) {
+                if (sorted_arr[i + 1].src == sorted_arr[i].src) {
+                    results.push(sorted_arr[i]);
+                }
+            }
 	}
 
 	if (results.length > 0) {
